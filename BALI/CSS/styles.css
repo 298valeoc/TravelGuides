@@ -1,0 +1,296 @@
+/* Body 
+-------------------------------------------------------------------------*/
+    body {
+        margin: 0;
+        background-color: #F2F2F2;
+    }
+
+/* Header 
+-------------------------------------------------------------------------*/
+    header {
+        background-color:#3F5925;
+        color:#F2F2F2;
+        padding-bottom: 0px;
+    }
+
+    header::after {
+        content:'';
+        display: table;
+        clear: both;
+    }
+
+    .logo-header {
+        height:50px;
+        float: left;
+        padding: 12px 0;
+    }
+    .container-header {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    nav {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        float: right;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-left: 35px;
+        padding-top: 10px;
+        position: relative;
+    }
+
+    nav li a {
+        color:#F2F2F2;
+        text-decoration: none;
+        font-family: fira-sans, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        letter-spacing: 2px;
+        font-size: 12px;
+    }
+
+    nav li a:hover {
+        color:#D9D9D9;
+    }
+
+    nav li a::before {
+        content: '';
+        display: block;
+        height: 2.5px;
+        width: 100%;
+        background-color: #212621;
+
+        position: absolute;
+        top: 0;
+        width: 0%;
+    }
+
+    nav li a:hover::before {
+        width: 100%;
+
+        transition: ease-in-out, 250ms;
+    }
+
+/* Intro - Hero Image
+-------------------------------------------------------------------------*/
+    .hero {
+        /* Sizing */
+    
+        /* Flexbox stuff */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        /* Text styles */
+        text-align: center;
+    
+        /* Background styles */
+        background-image: url(../images/header-1.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+  
+    .hero-text {
+        /* Text styles */
+        font-family: futura-pt, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 100px;
+        color: #F2F2F2;
+
+        /* Margins */
+        margin-top: 250px;
+        margin-bottom: 300px;
+    }
+
+/* Quote -Section
+-------------------------------------------------------------------------*/
+    .q-section {
+
+        /* Flexbox */
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* Margin */ 
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    q {
+        /* Text stlyes */
+        font-family: ff-meta-serif-web-pro, serif;
+        font-weight: 300;
+        font-style: normal;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    cite {
+        /* Text stlyes */
+        font-family: ff-meta-serif-web-pro, serif;
+        font-weight: 600;
+        font-style: italic;
+        
+    }
+
+    .content-menu:before {
+        content: '';
+        display: block;
+        height: 1.5px;
+        width: 80%;
+        background-color: #212621;
+        
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 100px;
+        top: 0px;
+    }
+
+ /* Main - Section
+-------------------------------------------------------------------------*/
+    Main {
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 1rem;
+    
+    }
+
+        /* Text Style */
+        main h3 {
+            font-family: futura-pt, sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 36px;
+        }
+
+        main p {
+            font-family: ff-meta-serif-web-pro, serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 18px;
+        }
+
+        main h4 {
+            font-family: futura-pt, sans-serif;
+            font-weight: 500;
+            font-style: normal; 
+            text-transform: uppercase;
+            color: #212621;
+        }
+
+ /* Cards - Section
+-------------------------------------------------------------------------*/
+    .cards {
+        max-width: 90rem;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+    .cards > ul {
+        list-style: none;
+    }
+
+    .card + .card {
+        margin-top: 1.5rem;
+    }
+
+    @supports (display: grid) {
+        .cards > ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 1.5rem;
+        }
+
+        .card + .card {
+        margin-top: 0;
+        }
+    }
+
+    .card {
+        border: 0 solid;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .card .text {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        background-color:#3F5925;   
+    }
+
+    .card p {
+        max-width: 60ch;
+        font-size: 14px;
+        color: #D9D9D9;
+    }
+
+    .card .img {
+        height: 15rem;
+        
+    }
+
+    .card .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        ;
+    }
+
+    .card a {
+        text-decoration: none;
+        color: #D9D9D9;
+    }
+
+    /*.card a:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }*/
+
+    .card a:after {
+        content: '';
+        display: block;
+        height: 2.5px;
+        width: 80%;
+        background-color: #212621;
+
+        top: 0;
+        width: 0%;
+    }
+
+    .card a:hover::after {
+        width: 80%;
+        transition: ease-in-out, 300ms;
+    }
+
+    .card a:focus {
+        outline: none;
+        text-decoration: underline;
+        color: #212621;
+    }
+
+    .card:focus-within,
+    .card:hover {
+        border: 0 solid;
+        box-shadow: 5px 5px 10px 5px #888888;
+        color: #212621;
+    }
+
+    .card:focus-within a:focus {
+        text-decoration: none;
+    }
